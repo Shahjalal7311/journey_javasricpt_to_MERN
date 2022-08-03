@@ -10,7 +10,16 @@
     - Minimal function
     - Return data
     - Return function
-    
+
   # Execution
     - Function call
     - Self executing
+
+  # Scope
+    - call variable inside and outside
+    - nested function call
+    
+  # Input
+    - Object
+    - input
+    - Argument
