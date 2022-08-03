@@ -52,3 +52,47 @@ const function_ret = (x) => {
 // console.log(function_ret(10),'return function');
 // console.log(function_ret(10)(),'return value');
 
+/*
+* Scope
+* if we declared a veriable inside 'n=20' a function and outside 'n=10' function.
+* we try to acecess the variable n1 and n2 inside the function, we can acecess `n` and n1 variable inside the function
+* but if we try to acecess n && n1 out site the function we can't acecss n1 varible
+* its call scoping or Scope  
+*/
+
+let n = 20;
+function scpoing_function(){
+  n1 = 10;
+  console.log(n,'call varibel');
+}
+
+// console.log(n,'return value'); // return value
+// console.log(n1,'call value') // show undefind error
+
+function outer(x){
+  function inner(y){
+    return x+y;
+  }
+  return inner;
+}
+
+// console.log(outer);// it's return a functon
+// console.log(outer(10),'outer') // this outer value 10 is called closer
+// const temp = outer(10);
+
+// console.log(temp(20),'jjjjjjjj')
+
+// Update refernce value inside function
+var n1 = 10;
+function refference(){
+  var n1 = 20;
+}
+// console.log(refference(),'refference');
+// console.log(n1,'')
+
+var m = { x: 10 }
+function change_new(){
+  var m = {x:30}; //
+  m.x = 30 // call by refference
+}
+// console.log(m,'change_new');
